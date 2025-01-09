@@ -27,31 +27,37 @@ body {
     background-image: url("../img/Background.png");
     background-repeat: no-repeat;
     background-size: contain;
-    margin-top: 50px;
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
 }
 
 .hero-section--container {
-    padding: 110px 110px 100px 30px;
-    max-width: 700px;
+    max-width: 40%;
     text-align: center;
+    margin: 7rem 0 0 2rem; 
 }
 
 .hero-section--container img {
-    margin: 20px 0;
+    margin: 1em 0;
+    width: 70%;
+    height: auto;
 }
 
 .hero-section--container .botoes {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 8px;
-    margin: 0 30px;        
+    gap: .5em;
+    margin: 0 2em;        
 }
 
 .hero-section--container .azul {    
     background-color: var(--cor-botao);
     border-radius: 8px;
-    padding: 16px;
+    padding: 1em;
     margin-bottom: 8px;
     text-decoration: none;   
     color: var(--cor-titulo);
@@ -60,60 +66,62 @@ body {
 .hero-section--container .normal {    
     border: 1px solid var(--cor-titulo);
     border-radius: 8px;
-    padding: 16px;  
+    padding: 1em;  
     text-decoration: none; 
     color: var(--cor-titulo);
 }
 
 .hero-section--container h1 {
     font-family: var(--font-primaria);
-    font-size: 28px;
+    font-size: 1.80em;
     font-weight: 700;
-    line-height: 40px;
 }
 
 .hero-section--container p {
     margin-top: 8px;
     font-weight: 400;
-    font-size: 12px;
+    font-size: .8em;
 }
 
 main {
-    margin: 0 100px;
+    margin: 0 5rem;
 }
 
 .section {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;    
-    gap: 50px;    
+    align-items: center;    
+    gap: 40px;    
 }
 
 .section__texto h2 {
     font-family: var(--font-primaria);
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--font-primaria);
+    margin-bottom: .5em;
 }
 
 .section__texto p {
     font-family: var(--font-primaria);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    color: var(--cor-paragrafo);
-    margin-top: 20px;
+    color: var(--cor-paragrafo);    
 }
 
-.section a {
-    display: inline-block;
+.section__texto button {
+    padding: 1rem;
     border-radius: 8px;
-    padding: 16px;
+    margin-top: 10px;    
     text-decoration: none;   
     color: var(--cor-titulo);
-    background-color: var(--cor-botao);
-    margin-top: 20px;
+    background: var(--cor-botao);
+}
+
+
+.section img {
+    width: 50%;
 }
 
 .dispositivos {
@@ -127,22 +135,25 @@ main {
 .dispositivos h2 {
     font-family: var(--font-primaria);
     font-weight: 700;
-    font-size: 48px;
-    margin-bottom: 40px;
+    font-size: 3em;
+    margin-bottom: 80px;
 }
 
 .dispositivos__item {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-    gap: 40px;
+    align-items: center;
 }
 
 .dispositivos__item__texto h3 {
     font-family: var(--font-primaria);
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2em;
+    text-align: center;
+}
+
+dispositivos__item__texto img {
+    width: 100%;
 }
 
 .rodape {
@@ -150,20 +161,20 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: 1.5em;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 4em;
 }
 
 .rodape img {
-    margin: 30px 0;
+    margin-top: 30px;
+    width: 10%;
 }
 
 .rodape__links {
     display: flex;
     flex-direction: row;
-    gap: 16px;
-    
+    gap: 1em;    
 }
 
 .rodape__links li {
@@ -173,7 +184,7 @@ main {
 .rodape__links a {
     font-family: var(--font-primaria);
     color: var(--cor-titulo);
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
     text-decoration: none;
     justify-content: space-around;        
@@ -182,9 +193,79 @@ main {
 .rodape p {
     font-family: var(--font-primaria);
     color: #C0C0C0;
-    font-size: 14px;
+    font-size: .75em;
     font-weight: 400;
-    
-
 }
 
+@media (max-width: 1000px) {
+
+
+
+
+
+    .hero-section {
+
+        background-size: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .hero-section--container {
+        max-width: 100%;
+        text-align: center;
+        margin: 13rem 20px 0 20px; 
+    }
+    
+    .hero-section--container img {
+        margin: 1em 0;
+        width: 70%;
+        height: auto;
+    }
+
+    main {
+        margin: 0 2rem;
+    }
+    
+    .section {
+        height: auto;
+        flex-direction: column;
+        margin: 150px 0;   
+    }
+
+    .section-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 10px;
+    }    
+    
+    .section img {
+        width: 70%;
+    }
+    
+    .dispositivos {
+        height: auto;
+        text-align: center; 
+        margin-bottom: 40px;       
+    }
+    
+    .dispositivos h2 {
+        margin-bottom: 30px;
+    }
+    
+    .dispositivos__item {
+        flex-direction: column;
+    }
+    
+    dispositivos__item__texto img {
+        width: 70%;
+    }
+    
+    .rodape img {
+        margin-top: 30px;
+        width: 20%;        
+    }
+    
+    .rodape__links {
+        flex-direction: column;    
+    }
+}
