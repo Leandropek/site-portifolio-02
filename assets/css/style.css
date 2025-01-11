@@ -91,7 +91,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;    
-    gap: 40px;    
+    gap: 40px;   
 }
 
 .section__texto h2 {
@@ -117,7 +117,6 @@ main {
     color: var(--cor-titulo);
     background: var(--cor-botao);
 }
-
 
 .section img {
     width: 50%;
@@ -256,6 +255,10 @@ dispositivos__item__texto img {
     
     .dispositivos__item__texto img {
         width: 70%;
+    }
+
+    .rodape{
+        margin-top: 100px;
     }
     
     .rodape img {
