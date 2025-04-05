@@ -5,10 +5,10 @@
     --font-primaria: "Inter", serif;
 
     --cor-fundo: #00030C;
-    --cor-botao: #167BF7;
+    --cor-botao: #167BF7; /* Azul com contraste adequado */
 
     --cor-titulo: #fff;
-    --cor-paragrafo: #F9F9F9;    
+    --cor-paragrafo: #E0E0E0; /* Ajuste para melhor leitura */
 }
 
 /* Reset e estilos globais */
@@ -84,6 +84,10 @@ body {
     outline-offset: 2px;
 }
 
+.hero-section--container .azul:hover {
+    background-color: #0F5BB5;
+}
+
 .hero-section--container .normal {    
     border: 1px solid var(--cor-titulo);
     border-radius: 8px;
@@ -95,6 +99,10 @@ body {
 .hero-section--container .normal:focus {
     outline: 2px solid #fff;
     outline-offset: 2px;
+}
+
+.hero-section--container .normal:hover {
+    border-color: #E0E0E0;
 }
 
 .hero-section--container h1 {
@@ -247,7 +255,7 @@ dispositivos__item__texto img {
     .hero-section--container {
         max-width: 100%;
         text-align: center;
-        margin: 16rem 20px 0 20px; 
+        margin: 10rem 20px 0 20px; /* Redução de margem */
     }
     
     .hero-section--container img {
